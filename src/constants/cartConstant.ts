@@ -1,0 +1,8 @@
+export const GET_NUMBER_CART = 'GET_NUMBER_CART' ;
+export const ADD_CART = 'ADD_CART' ;
+export const UPDATE_CART = 'UPDATE_CART';
+export const DELETE_CART = 'DELETE_CART';
+export const DELETE_ALL_CART = 'DELETE_ALL_CART';
+export const INCREASE_QUANTITY = 'INCREASE_QUANTITY';
+export const DECREASE_QUANTITY = 'DECREASE_QUANTITY';
+export const CART_EMPTY = 'CART_EMPTY';

@@ -1,0 +1,35 @@
+.cate-child {
+  padding-bottom: 10px;
+  .cate-name {
+    color: #474646;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+.circle {
+  border: 1px solid #0F1C3F;
+  border-radius: 50%;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  float: left;
+}
+
+.circle_active {
+  border: 2px solid #0F1C3F;
+  border-radius: 100%;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  margin-top: 4px;
+  float: left;
+}
+
+.name-color {
+  cursor: pointer;
+  position: relative;
+  padding-left: 33px;
+  font-size: 16px;
+  color: #636363;
+}

@@ -1,0 +1,38 @@
+@import "./Register.scss";
+
+.group-input {
+    position: relative;
+    i {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: color 0.3s linear;
+      color: #979797;
+      font-size: 14px;
+      &:hover {
+        color: #e29c1a;
+      }
+    }
+  }
+  input {
+    transition: border 0.2s linear;
+    background: #f6f8fa;
+    &:focus {
+      border: 1px solid #e7ab3c !important;
+      background: #fff;
+    }
+  }
+  button[type="submit"] {
+    transition: all 0.2s linear;
+    &:hover {
+      background: #e9b961;
+    }
+    &:active {
+      background: #eee7da;
+      border: 1px solid #e7ab3c;
+      color: #e29c1a;
+    }
+  }
+  

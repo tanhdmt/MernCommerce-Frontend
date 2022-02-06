@@ -1,0 +1,38 @@
+.sub-menu {
+    display: none;
+    top: 0 !important;
+    left: 100% !important;
+  }
+  .subsub-menu {
+    display: none;
+    top: 0 !important;
+    left: 100% !important;
+  }
+  .depart-hover > li:hover > ul.sub-menu {
+    z-index: 100;
+    display: block;
+  }
+  
+  .depart-hover > li > ul.sub-menu > li:hover > ul.subsub-menu {
+    z-index: 100;
+    display: block;
+  }
+  
+  .depart-hover > li > ul.sub-menu > li > a {
+    font-size: 16px;
+    padding-left: 40px;
+    padding-top: 16px;
+    padding-right: 30px;
+    transition: all 0.3s;
+    color: #000;
+  }
+  
+  .depart-hover > li > ul.sub-menu > li > ul.subsub-menu > li > a {
+    font-size: 16px;
+    padding-left: 40px;
+    padding-top: 16px;
+    padding-right: 30px;
+    transition: all 0.3s;
+    color: #000;
+  }
+  

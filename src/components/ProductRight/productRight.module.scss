@@ -1,0 +1,31 @@
+.slick-arrow{
+    background-color: transparent;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    color: white;
+}
+.slick-arrow:hover,
+.slick-arrow:active{
+    background-color: transparent !important;
+}
+.slick-prev,
+.slick-next{
+    top: 35%;
+}
+.slick-next {
+    right: -40px !important;
+}
+.slick-prev {
+    left: -40px !important;
+}
+.slick-prev:before {
+    content: '←';
+    font-size: 30px;
+    color: rgb(0, 0, 0) !important;
+}
+.slick-next:before {
+    content: '→';
+    font-size: 30px;
+    color: rgb(0, 0, 0) !important;
+}
