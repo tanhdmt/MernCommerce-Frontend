@@ -167,7 +167,7 @@ const OrderScreen = (props: OrderScreenProps) => {
                                             <li>
                                                 Product <span>Total</span>
                                             </li>
-                                            {order.orderItems.map(
+                                            {order.orderItems?.map(
                                                 (item, key) => {
                                                     return (
                                                         <li
