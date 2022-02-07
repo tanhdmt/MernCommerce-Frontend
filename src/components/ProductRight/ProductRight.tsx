@@ -95,7 +95,7 @@ const ProductRight = (props: ProductRightProps) => {
         dots: true,
         infinite: true,
         speed: 2000,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
@@ -147,7 +147,7 @@ const ProductRight = (props: ProductRightProps) => {
         <section className="man-banner spad">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-lg-8">
+                    <div className="col-lg-12">
                         <div className="filter-control">
                             <ul>
                                 {childCateMale.map((value, key) => {

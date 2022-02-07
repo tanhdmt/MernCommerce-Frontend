@@ -2447,7 +2447,9 @@ ol {
 .product-tab {
     padding-top: 60px;
 }
-
+.tab-item ul li {
+    padding: 0;
+}
 .tab-item ul li:nth-child(1) a {
     border-right: 1px solid #ebebeb;
 }
@@ -2471,6 +2473,7 @@ ol {
     border-top: 1px solid #ebebeb;
     border-left: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
+    text-align: center;
 }
 
 .tab-item ul li a.active {
@@ -2701,6 +2704,34 @@ ol {
     padding-left: 20px;
     padding-top: 10px;
     margin-bottom: 45px;
+}
+
+.circle {
+    border: 1px solid #0f1c3f;
+    border-radius: 50%;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    float: left;
+}
+
+.circle_active {
+    border: 2px solid #0f1c3f;
+    border-radius: 100%;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    margin-top: 4px;
+    float: left;
+}
+
+.name-color {
+    cursor: pointer;
+    position: relative;
+    padding-left: 33px;
+    font-size: 16px;
+    color: #636363;
 }
 
 /*---------------------

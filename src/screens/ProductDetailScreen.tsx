@@ -159,8 +159,8 @@ const ProductDetailScreen = (props: ProductDetailScreen) => {
     const checkColor = (id: string) => {
         var color: string = "";
         if (id && lstColor.Colors) {
-            const infoColor = lstColor.Colors.find((value) => {
-                id.includes(value._id);
+            const infoColor = lstColor.Colors.find((item) => {
+                return id == item._id;
             });
             if (infoColor) color = infoColor.code;
         }
@@ -210,14 +210,7 @@ const ProductDetailScreen = (props: ProductDetailScreen) => {
             <section className="product-shop spad page-details">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3">
-                            <MenuLeft
-                                listCate={lstCate.Categories}
-                                listColor={lstColor.Colors}
-                                listSize={lstSize.Sizes}
-                            />
-                        </div>
-                        <div className="col-lg-9">
+                        <div className="col-lg-12">
                             <div className="row">
                                 <div className="col-lg-6">
                                     <div className="product-pic-zoom">
@@ -469,23 +462,22 @@ const ProductDetailScreen = (props: ProductDetailScreen) => {
                                                         }
                                                     />
                                                 </div>
-                                                <Link href={router.pathname}>
-                                                    <a
-                                                        onClick={() =>
-                                                            handleAddCart({
-                                                                ...product,
-                                                                size: sizes,
-                                                                color: colors,
-                                                                getQty: Number(
-                                                                    quantityPro
-                                                                ),
-                                                            })
-                                                        }
-                                                        className="primary-btn pd-cart"
-                                                    >
-                                                        Add To Cart
-                                                    </a>
-                                                </Link>
+                                                <a
+                                                    href="javascript:void(0);"
+                                                    onClick={() =>
+                                                        handleAddCart({
+                                                            ...product,
+                                                            size: sizes,
+                                                            color: colors,
+                                                            getQty: Number(
+                                                                quantityPro
+                                                            ),
+                                                        })
+                                                    }
+                                                    className="primary-btn pd-cart"
+                                                >
+                                                    Add To Cart
+                                                </a>
                                             </div>
                                         ) : (
                                             <div className="quantity">
@@ -525,9 +517,9 @@ const ProductDetailScreen = (props: ProductDetailScreen) => {
                             <div className="product-tab">
                                 <div className="tab-item">
                                     <ul className="nav" role="tablist">
-                                        <li>
+                                        <li className="col-lg-4">
                                             <a
-                                                className="active"
+                                                className="active col-lg-12"
                                                 data-toggle="tab"
                                                 href="#tab-1"
                                                 role="tab"
@@ -535,8 +527,9 @@ const ProductDetailScreen = (props: ProductDetailScreen) => {
                                                 DESCRIPTION
                                             </a>
                                         </li>
-                                        <li>
+                                        <li className="col-lg-4">
                                             <a
+                                                className="col-lg-12"
                                                 data-toggle="tab"
                                                 href="#tab-2"
                                                 role="tab"
@@ -544,8 +537,9 @@ const ProductDetailScreen = (props: ProductDetailScreen) => {
                                                 SPECIFICATIONS
                                             </a>
                                         </li>
-                                        <li>
+                                        <li className="col-lg-4">
                                             <a
+                                                className="col-lg-12"
                                                 data-toggle="tab"
                                                 href="#tab-3"
                                                 role="tab"

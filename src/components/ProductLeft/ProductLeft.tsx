@@ -99,7 +99,7 @@ const ProductLeft = (props: ProductLeftProps) => {
         dots: true,
         infinite: true,
         speed: 2000,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
@@ -169,7 +169,7 @@ const ProductLeft = (props: ProductLeftProps) => {
                         <></>
                     )}
 
-                    <div className="col-lg-8 offset-lg-1">
+                    <div className="col-lg-12 ">
                         <div className="filter-control">
                             <ul>
                                 {childCateFeMale.map((value, key) => {

@@ -234,12 +234,12 @@ const Header = () => {
                                             <div className="select-button">
                                                 <Link href="/view-cart">
                                                     <a className="primary-btn view-card">
-                                                        VIEW CARD
+                                                        VIEW CART
                                                     </a>
                                                 </Link>
                                                 <Link href="/view-cart/check-out">
                                                     <a className="primary-btn checkout-btn">
-                                                        CHECK OUT
+                                                        CHECKOUT
                                                     </a>
                                                 </Link>
                                             </div>

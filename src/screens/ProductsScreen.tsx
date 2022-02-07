@@ -337,25 +337,19 @@ const ProductsScreen = (props: ProductScreenProps) => {
                                                             </div>
                                                             <ul>
                                                                 <li className="w-icon active">
-                                                                    <Link
-                                                                        href={
-                                                                            router.pathname
-                                                                        }
-                                                                    >
-                                                                        <a>
-                                                                            <i
-                                                                                onClick={() =>
-                                                                                    handleAddCart(
-                                                                                        {
-                                                                                            ...value,
-                                                                                            getQty: 1,
-                                                                                        }
-                                                                                    )
-                                                                                }
-                                                                                className="icon_bag_alt"
-                                                                            ></i>
-                                                                        </a>
-                                                                    </Link>
+                                                                    <a href="javascript:void(0);">
+                                                                        <i
+                                                                            onClick={() =>
+                                                                                handleAddCart(
+                                                                                    {
+                                                                                        ...value,
+                                                                                        getQty: 1,
+                                                                                    }
+                                                                                )
+                                                                            }
+                                                                            className="icon_bag_alt"
+                                                                        ></i>
+                                                                    </a>
                                                                 </li>
                                                                 <li className="quick-view">
                                                                     <Link

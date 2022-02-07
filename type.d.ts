@@ -159,8 +159,8 @@ declare namespace projectType {
         email?: string;
     }
     interface Order {
-        id: any;
-        orderItems: OrderItem;
+        _id: any;
+        orderItems: OrderItem[];
         shippingAddress: ShippingAddress;
         paymentMethod: string;
         paymentResult?: PaymentResult;
@@ -179,7 +179,7 @@ declare namespace projectType {
         loading?: boolean;
         success?: boolean;
         orders: Order[];
-        order?: Order[] | string[];
+        order?: Order;
         error?: string[];
     }
 

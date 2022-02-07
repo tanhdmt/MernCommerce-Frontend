@@ -18,7 +18,6 @@ const MenuLeft = (props: MenuLeftProps) => {
     const router = useRouter();
     const slug = router.query;
 
-    console.log(slug?.slug);
     const [match, setMatch] = useState("");
     var arrCate: CategoryWithChild[] = [];
     var [typeCate, setTypeCate] = useState<string | undefined>();
@@ -27,12 +26,9 @@ const MenuLeft = (props: MenuLeftProps) => {
     const lstCate = props.listCate;
     const lstColor = props.listColor;
     const lstSize = props.listSize;
-    var lstParentCate: Category[] = [];
-    if (lstCate) {
-        lstParentCate = lstCate.filter(
-            (value) => value.parentCate === "" && value.status === "1"
-        );
-    }
+    var lstParentCate: Category[] = lstCate?.filter(
+        (value) => value.parentCate === "" && value.status === "1"
+    );
 
     const getGrandChild = (id: any, parentType: string | undefined) => {
         const listCateChild: Category[] = [];
@@ -66,6 +62,7 @@ const MenuLeft = (props: MenuLeftProps) => {
     // };
     useEffect(() => {
         if (slug?.slug) {
+            console.log("slug " + slug.slug[0]);
             slug.slug.indexOf("product") < 0 && setMatch(slug.slug[0]);
         }
     }, [slug]);
@@ -103,7 +100,7 @@ const MenuLeft = (props: MenuLeftProps) => {
             });
             setChildCate(arrCate);
         }
-    }, [lstCate, slug, lstParentCate]);
+    }, [lstCate, slug, match]);
 
     return (
         <>

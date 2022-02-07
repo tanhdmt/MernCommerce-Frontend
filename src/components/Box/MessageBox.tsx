@@ -1,5 +1,5 @@
-import React from 'react'
-import './style.scss'
+import React from "react";
+import styles from "./messageBox.module.scss";
 
 interface MessageBoxProps {
     variant: string;
@@ -8,9 +8,13 @@ interface MessageBoxProps {
 
 const MessageBox = (props: MessageBoxProps) => {
     return (
-        <div className={`alert alert-${props.variant || 'info'}`}>
+        <div
+            className={`alert ${styles.alert} alert-${
+                props.variant || "info"
+            } ${styles['alert-${props.variant || "info"}']}`}
+        >
             {props.children}
         </div>
-    )
-}
-export default MessageBox
+    );
+};
+export default MessageBox;
