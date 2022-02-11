@@ -1975,7 +1975,7 @@ ol {
     content: "";
 }
 
-.filter-widget .fw-color-choose .cs-item a 
+.filter-widget .fw-color-choose .cs-item a .circle
 {
     width: 15px;
     height: 15px;
