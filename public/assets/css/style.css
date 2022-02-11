@@ -1781,6 +1781,10 @@ ol {
     padding-bottom: 80px;
 }
 
+.cate-child {
+    margin-bottom: 25px;
+}
+
 .filter-widget {
     margin-bottom: 45px;
 }
@@ -1971,7 +1975,8 @@ ol {
     content: "";
 }
 
-.filter-widget .fw-color-choose .cs-item a .circle {
+.filter-widget .fw-color-choose .cs-item a 
+{
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -1998,7 +2003,7 @@ ol {
     color: #252525;
     font-weight: 700;
     height: 40px;
-    width: 47px;
+    padding: 0 10px;
     border: 1px solid #ebebeb;
     text-align: center;
     line-height: 40px;
@@ -2238,7 +2243,7 @@ ol {
     font-size: 12px;
     display: inline-block;
     color: #fac451;
-    margin-right: -3px;
+    margin-right: 6px;
 }
 
 .product-details .pd-rating span {
@@ -2711,7 +2716,7 @@ ol {
     border-radius: 50%;
     left: 0;
     height: 18px;
-    width: 18px;
+    min-width: 18px;
     margin-top: 4px;
     float: left;
 }
@@ -2729,9 +2734,15 @@ ol {
 .name-color {
     cursor: pointer;
     position: relative;
-    padding-left: 33px;
+    padding-left: 5px;
     font-size: 16px;
     color: #636363;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 /*---------------------
@@ -4406,6 +4417,9 @@ ol {
     .instagram-photo .insta-item {
         width: 100%;
     }
+    .inner-header .advanced-search {
+        margin-left: 0;
+    }
     .inner-header .advanced-search .category-btn {
         display: none;
     }
@@ -4419,6 +4433,9 @@ ol {
     .countdown-timer .cd-item {
         margin-right: 5px;
         padding: 10px 6px;
+    }
+    .product-item {
+	margin-right: 0;
     }
     .product-show-option .select-option {
         display: inline-block;
