@@ -32,9 +32,7 @@ export const createOrder = (order: any) => async (dispatch: Dispatch) => {
     dispatch({ type: ORDER_CREATE_REQUEST, payload: order });
     try {
         if (order.paymentMethod === "cash") {
-            alert(
-                "Bạn đã đặt hàng thành công"
-            );
+            alert("Bạn đã đặt hàng thành công");
             await api.patch("/api/product/decrease-qty", order);
             const { data } = await api.post("/api/order", order);
             dispatch({ type: ORDER_CREATE_SUCCESS, payload: data.order });
@@ -123,23 +121,6 @@ export const statusOrder = (order: any) => async (dispatch: Dispatch) => {
                 ? e.response.data.message
                 : e.message;
         dispatch({ type: ORDER_STATUS_FAIL, payload: message });
-    }
-};
-
-export const listOrderMine = () => async (dispatch: Dispatch) => {
-    dispatch({ type: ORDER_MINE_LIST_REQUEST });
-    const userInfo = localStorage.getItem("userInfo");
-    if (!userInfo) return;
-    const user = JSON.parse(userInfo)._id;
-    try {
-        const { data } = await api.get(`/api/order/${user}/mine`);
-        dispatch({ type: ORDER_MINE_LIST_SUCCESS, payload: data });
-    } catch (e: any) {
-        const message =
-            e.response && e.response.data.message
-                ? e.response.data.message
-                : e.message;
-        dispatch({ type: ORDER_MINE_LIST_FAIL, payload: message });
     }
 };
 
