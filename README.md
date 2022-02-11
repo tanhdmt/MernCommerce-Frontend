@@ -9,6 +9,7 @@ Frontend of ECommerce site using NextJS + Redux + Typescript
 - Typescript
 - SASS
 - Formik
+- Next-redux-wrapper (tesing in __Redux-wrapper__ branch)
 
 ## Installation
 
