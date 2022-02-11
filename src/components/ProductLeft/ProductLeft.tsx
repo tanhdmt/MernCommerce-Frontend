@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./productLeftStyle.module.scss";
 import { RootState, Image, Category, Product } from "type";
+import { isMobile } from "react-device-detect";
 
 interface ProductLeftProps {
     listFeMale: Category[];
@@ -99,7 +100,7 @@ const ProductLeft = (props: ProductLeftProps) => {
         dots: true,
         infinite: true,
         speed: 2000,
-        slidesToShow: 4,
+        slidesToShow: isMobile ? 1 : 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,

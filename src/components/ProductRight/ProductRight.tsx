@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./productRight.module.scss";
 import { Category, Image, Product, RootState } from "type";
+import { isMobile } from "react-device-detect";
 
 interface ProductRightProps {
     listMale: Category[];
@@ -95,7 +96,7 @@ const ProductRight = (props: ProductRightProps) => {
         dots: true,
         infinite: true,
         speed: 2000,
-        slidesToShow: 4,
+        slidesToShow: isMobile ? 1 : 4,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
