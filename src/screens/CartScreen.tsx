@@ -182,7 +182,10 @@ const CartScreen = () => {
                                                     <tr key={key}>
                                                         <td className="cart-pic first-row">
                                                             <img
-                                                                src={`http://localhost:5000/products/${checkImage(
+                                                                src={`${
+                                                                    process.env
+                                                                        .NEXT_PUBLIC_API_BASE_ENDPOINT
+                                                                }/products/${checkImage(
                                                                     key
                                                                 )}`}
                                                                 alt=""

@@ -13,7 +13,7 @@ import {
 import { addCart } from "../redux/actions/cartActions";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Product, RootState } from "type";
+import { Category, Color, Product, RootState, Size } from "type";
 
 interface ProductScreenProps {
     slug: {
@@ -267,12 +267,12 @@ const ProductsScreen = (props: ProductScreenProps) => {
         return arr[key];
     };
 
-    useEffect(() => {
-        dispatch(getCategories());
-        dispatch(getProducts());
-        dispatch(getColors());
-        dispatch(getSizes());
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(getCategories());
+    //     dispatch(getProducts());
+    //     dispatch(getColors());
+    //     dispatch(getSizes());
+    // }, [dispatch]);
 
     return (
         <div>

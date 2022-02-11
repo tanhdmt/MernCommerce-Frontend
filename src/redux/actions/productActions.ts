@@ -7,6 +7,7 @@ import {
     SET_COLOR,
     SET_SIZE,
     PRODUCTS_SEARCH,
+    PRODUCTS_FILTER,
 } from "../../constants/productConstant";
 import { Dispatch } from "redux";
 
@@ -20,6 +21,23 @@ export const getProducts = () => async (dispatch: Dispatch) => {
         console.log(e);
     }
 };
+
+export const filterProduct =
+    (objFilter: { cateId?: string; color?: string; size?: string }) =>
+    async (dispatch: Dispatch) => {
+        try {
+            if (!objFilter) return;
+            let queryStr = "";
+            if (objFilter.cateId)
+                queryStr += `cateId=${objFilter.cateId.trim()}`;
+            if (objFilter.color) queryStr += `cateId=${objFilter.color.trim()}`;
+            if (objFilter.size) queryStr += `cateId=${objFilter.size.trim()}`;
+            const res = await api.get(`api/product/filter?${queryStr}`);
+            dispatch({ type: PRODUCTS_FILTER, payload: res.data });
+        } catch (e) {
+            console.log(e);
+        }
+    };
 
 export const getSearch = (search: string) => async (dispatch: Dispatch) => {
     try {

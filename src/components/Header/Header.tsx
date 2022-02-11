@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Nav from "../Nav";
-import { getCategories } from "../../redux/actions/categoryActions";
 import { deleteCart } from "../../redux/actions/cartActions";
 import { getSearch } from "../../redux/actions/productActions";
 import { RootState } from "type";
@@ -59,9 +58,9 @@ const Header = () => {
         router.push("/");
     }
 
-    useEffect(() => {
-        dispatch(getCategories());
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch(getCategories());
+    // }, [dispatch]);
 
     return (
         <header className="header-section">

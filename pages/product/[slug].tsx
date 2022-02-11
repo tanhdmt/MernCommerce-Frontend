@@ -6,7 +6,7 @@ import { useRouter, NextRouter } from "next/router";
 const Product: React.FC = () => {
     const router = useRouter();
     const query: any = router.query;
-    console.log("query" + query);
+
     return (
         <div>
             <Layout>

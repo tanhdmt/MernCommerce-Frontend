@@ -7,9 +7,6 @@ import DealWeek from "../components/DealWeek/DealWeek";
 import ProductRight from "../components/ProductRight/ProductRight";
 import Insta from "../layouts/Insta/Insta";
 import { getRole } from "../redux/actions/userActions";
-import { getCategories } from "../redux/actions/categoryActions";
-import { getProducts } from "../redux/actions/productActions";
-import { getImages } from "../redux/actions/imageActions";
 import { RootState } from "type";
 
 const HomeScreen = () => {
@@ -30,9 +27,6 @@ const HomeScreen = () => {
     }, []);
     const id = userInfo ? JSON.parse(userInfo)._id : null;
     useEffect(() => {
-        dispatch(getCategories());
-        dispatch(getProducts());
-        dispatch(getImages());
         if (!window.location.hash) {
             window.location.href = window.location + "#home";
             window.location.reload();

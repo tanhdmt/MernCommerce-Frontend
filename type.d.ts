@@ -202,3 +202,4 @@ declare namespace projectType {
     }
 }
 export = projectType;
+export type AppThunkDispatch = ThunkDispatch<State, void, AnyAction>;
