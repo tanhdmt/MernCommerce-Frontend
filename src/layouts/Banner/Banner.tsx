@@ -20,13 +20,15 @@ const Banner = (props: BannerProps) => {
                         return (
                             <div key={key} className="col-lg-4">
                                 <Link href={`category/${value.slug}`}>
-                                    <a className="single-banner">
-                                        <img
-                                            src={`${process.env.NEXT_PUBLIC_API_BASE_ENDPOINT}/categories/${value.image}`}
-                                            alt=""
-                                        />
-                                        <div className="inner-text">
-                                            <h4>{value.name}</h4>
+                                    <a>
+                                        <div className="single-banner">
+                                            <img
+                                                src={`${process.env.NEXT_PUBLIC_API_BASE_ENDPOINT}/categories/${value.image}`}
+                                                alt=""
+                                            />
+                                            <div className="inner-text">
+                                                <h4>{value.name}</h4>
+                                            </div>
                                         </div>
                                     </a>
                                 </Link>

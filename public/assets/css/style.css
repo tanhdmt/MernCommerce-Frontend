@@ -1975,14 +1975,14 @@ ol {
     content: "";
 }
 
-.filter-widget .fw-color-choose .cs-item a .circle
+/* .filter-widget .fw-color-choose .cs-item a .circle
 {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     margin-right: 5px;
     border: 1px solid #252525;
-}
+} */
 
 .filter-widget .fw-size-choose .sc-item {
     display: inline-block;
@@ -4435,7 +4435,7 @@ ol {
         padding: 10px 6px;
     }
     .product-item {
-	margin-right: 0;
+        margin-right: 0;
     }
     .product-show-option .select-option {
         display: inline-block;
